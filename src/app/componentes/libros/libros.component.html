@@ -1,0 +1,23 @@
+<h1> Libros <small> disponibles actualmente </small> </h1>
+<hr>
+
+<div class="card-columns">
+
+
+<div class="card" *ngFor="let libro of libros; let i=index">
+  <img class="card-img-top img-fluid" [src]="libro.img">
+  <div class="card-body">
+    <h4 class="card-title">{{libro.nombre}}</h4>
+    <p class="card-text"> {{libro.bio}}</p>
+    <p class="card-text"><small class="text-muted">{{libro.aparicion}}</small></p>
+
+    <!--<button
+      type="button" class="btn btn-outline-primary btn-block">
+      Ver más...
+    </button>-->
+     <a [routerLink]="['/libro',i]" class="btn btn-outline-primary btn-block">Ver más...</a>
+
+  </div>
+</div>
+
+</div>

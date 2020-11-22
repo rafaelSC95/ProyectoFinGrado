@@ -1,0 +1,24 @@
+<h1> Peliculas <small> disponibles actualmente </small>  </h1>
+<hr>
+
+
+<div class="card-columns">
+
+
+<div class="card" *ngFor="let peli of peliculas; let i=index;">
+  <img class="card-img-top img-fluid" [src]="peli.img">
+  <div class="card-body">
+    <h4 class="card-title">{{peli.nombre}}</h4>
+    <p class="card-text"> {{peli.bio}}</p>
+    <p class="card-text"><small class="text-muted">{{peli.aparicion}}</small></p>
+
+    <!--<button
+      type="button" class="btn btn-outline-primary btn-block">
+      Ver más...
+    </button>-->
+    <a [routerLink]="['/pelicula',i]" class="btn btn-outline-primary btn-block">Ver más...</a>
+
+  </div>
+</div>
+
+</div>
